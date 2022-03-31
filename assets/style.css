@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisÃ©e */
+  overflow: hidden;
+}
+
+body:before{
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%; top: 50%;
+  content: "";
+  width: 500vh;
+  aspect-ratio: 1;
+  background: url(bgsvg2.svg) no-repeat center;
+  background-size: cover;
+  animation: test 150s linear infinite;
+  z-index: -1;
+}
+
+@keyframes test{
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+body > div {
+  height: 50vh;
+  margin-top: 25vh;
+  position: relative;
+}
+
+img {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: xx-large;
+    color: #640d0d;
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+}
+h2 {
+    font-size:20px;
+    color: #640d0d;
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+}
